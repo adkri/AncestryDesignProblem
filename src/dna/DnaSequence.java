@@ -11,7 +11,6 @@ public class DnaSequence {
     }
 
     public List<String> transcribe(String dna) {
-        // TODO: fix me
         List<String> aminoAcids = new LinkedList<>();
         int i = 0;
         while(i < dna.length()) {
@@ -22,7 +21,7 @@ public class DnaSequence {
             } catch (Exception e) {
                 // silently pass codon that does not transcribe a amino acid
             }
-            i += 1;
+            i += 3;
         }
         return aminoAcids;
     }
