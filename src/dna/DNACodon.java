@@ -21,6 +21,7 @@ public class DNACodon {
 
         // Codons from wikipedia: https://en.wikipedia.org/wiki/DNA_codon_table
 
+        
         aminoAcids.put("ala", List.of("GCT", "GCC", "GCA", "GCG"));
         aminoAcids.put("arg", List.of("CGT", "CGC", "CGA", "CGG", "AGA", "AGG"));
         aminoAcids.put("asn", List.of("AAT", "AAC"));
