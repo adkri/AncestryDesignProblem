@@ -20,6 +20,7 @@ public class Main {
             separater = "-";
         }
         System.out.println();
-
+        
     }
 }
+//Made it work @jspederosn14
