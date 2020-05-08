@@ -14,6 +14,7 @@ public class DnaSequenceTest {
 
     @Test
     public void transcribe() {
-        // TODO: implement tests
+        assertTrue(dnaSequence.transcribe("GCT").contains("ala"));
+        
     }
 }
