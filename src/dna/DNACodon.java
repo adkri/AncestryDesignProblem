@@ -1,5 +1,6 @@
 package dna;
 
+import java.util.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -7,7 +8,7 @@ import java.util.Map;
 public class DNACodon {
     private Map<String, List<String>> aminoAcids;
     private Map<String, String> codons;
-
+    private List<ArrayList<String>> aminoAcidDNA;
     /**
      * Sets up the DNA Codon values
      * Note: There is a constraint on the codon to amino acid relation.
@@ -18,45 +19,140 @@ public class DNACodon {
         // initialize the maps
         aminoAcids = new HashMap<>();
         codons = new HashMap<>();
+        aminoAcidDNA = new ArrayList<ArrayList<String>>();
 
         // Codons from wikipedia: https://en.wikipedia.org/wiki/DNA_codon_table
-
-        aminoAcids.put("ala", List.of("GCT", "GCC", "GCA", "GCG"));
-        aminoAcids.put("arg", List.of("CGT", "CGC", "CGA", "CGG", "AGA", "AGG"));
-        aminoAcids.put("asn", List.of("AAT", "AAC"));
-        aminoAcids.put("asp", List.of("GAT", "GAC"));
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(0).add("GCT");
+        aminoAcidDNA.get(0).add("GCC");
+        aminoAcidDNA.get(0).add("GCA");
+        aminoAcidDNA.get(0).add("GCG");
+        aminoAcids.put("ala", aminoAcidDNA.get(0));
+        
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(1).add("CGT");
+        aminoAcidDNA.get(1).add("CGC");
+        aminoAcidDNA.get(1).add("CGA");
+        aminoAcidDNA.get(1).add("CGG");
+        aminoAcidDNA.get(1).add("AGA");
+        aminoAcidDNA.get(1).add("AGG");
+        aminoAcids.put("arg", aminoAcidDNA.get(1));
+        
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(2).add("AAT");
+        aminoAcidDNA.get(2).add("AAC");
+        aminoAcids.put("asn", aminoAcidDNA.get(2));
+        
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(3).add("GAT");
+        aminoAcidDNA.get(3).add("GAC");
+        aminoAcids.put("asp", aminoAcidDNA.get(3));
         // there are some codons that can translate to both asp or asn, but due
         // to the constraint we will not include them
+        
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(4).add("TGT");
+        aminoAcidDNA.get(4).add("TGC");
+        aminoAcids.put("cys", aminoAcidDNA.get(4));
+        
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(5).add("CAA");
+        aminoAcidDNA.get(5).add("CAG");
+        aminoAcids.put("gln", aminoAcidDNA.get(5));
+        
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(6).add("GAA");
+        aminoAcidDNA.get(6).add("GAG");
+        aminoAcids.put("glu", aminoAcidDNA.get(6));
+        
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(7).add("GGT");
+        aminoAcidDNA.get(7).add("GGC");
+        aminoAcidDNA.get(7).add("GGA");
+        aminoAcidDNA.get(7).add("GGG");
+        aminoAcids.put("gly", aminoAcidDNA.get(7));
 
-        aminoAcids.put("cys", List.of("TGT", "TGC"));
-        aminoAcids.put("gln", List.of("CAA", "CAG"));
-        aminoAcids.put("glu", List.of("GAA", "GAG"));
-        aminoAcids.put("gly", List.of("GGT", "GGC", "GGA", "GGG"));
-
-        aminoAcids.put("his", List.of("CAT", "CAC"));
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(8).add("CAT");
+        aminoAcidDNA.get(8).add("CAC");
+        aminoAcids.put("his", aminoAcidDNA.get(8));
 
         // aminoAcids.put("start", List.of("ATG"));
-        // we don't include start as ATG already trancribes to start
+        // we don't include start as ATG already transcribes to start
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(9).add("ATT");
+        aminoAcidDNA.get(9).add("ATC");
+        aminoAcidDNA.get(9).add("ATA");
+        aminoAcids.put("lle", aminoAcidDNA.get(9));
+        
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(10).add("CTT");
+        aminoAcidDNA.get(10).add("CTC");
+        aminoAcidDNA.get(10).add("CTA");
+        aminoAcidDNA.get(10).add("CTG");
+        aminoAcidDNA.get(10).add("TTA");
+        aminoAcidDNA.get(10).add("TTG");
+        aminoAcids.put("leu", aminoAcidDNA.get(10));
+        
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(11).add("AAA");
+        aminoAcidDNA.get(11).add("AAG");
+        aminoAcids.put("lys", aminoAcidDNA.get(11));
 
-        aminoAcids.put("lle", List.of("ATT", "ATC", "ATA"));
-        aminoAcids.put("leu", List.of("CTT", "CTC", "CTA", "CTG", "TTA", "TTG"));
-        aminoAcids.put("lys", List.of("AAA", "AAG"));
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(12).add("ATG");
+        aminoAcids.put("met", aminoAcidDNA.get(12));
 
-        aminoAcids.put("met", List.of("ATG"));
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(13).add("TTT");
+        aminoAcidDNA.get(13).add("TTC");
+        aminoAcids.put("phe", aminoAcidDNA.get(13));
+        
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(14).add("CCT");
+        aminoAcidDNA.get(14).add("CCC");
+        aminoAcidDNA.get(14).add("CCA");
+        aminoAcidDNA.get(14).add("CCG");
+        aminoAcids.put("pro", aminoAcidDNA.get(14));
 
-        aminoAcids.put("phe", List.of("TTT", "TTC"));
-        aminoAcids.put("pro", List.of("CCT", "CCC", "CCA", "CCG"));
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(15).add("TCT");
+        aminoAcidDNA.get(15).add("TCC");
+        aminoAcidDNA.get(15).add("TCA");
+        aminoAcidDNA.get(15).add("TCG");
+        aminoAcidDNA.get(15).add("AGT");
+        aminoAcidDNA.get(15).add("AGC");
+        aminoAcids.put("ser", aminoAcidDNA.get(15));
 
-        aminoAcids.put("ser", List.of("TCT", "TCC", "TCA", "TCG", "AGT", "AGC"));
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(16).add("ACT");
+        aminoAcidDNA.get(16).add("ACC");
+        aminoAcidDNA.get(16).add("ACA");
+        aminoAcidDNA.get(16).add("ACG");
+        aminoAcids.put("thr", aminoAcidDNA.get(16));
+        
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(17).add("TGG");
+        aminoAcids.put("trp", aminoAcidDNA.get(17));
+        
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(18).add("TAT");
+        aminoAcidDNA.get(18).add("TAC");
+        aminoAcids.put("tyr", aminoAcidDNA.get(18));
 
-        aminoAcids.put("thr", List.of("ACT", "ACC", "ACA", "ACG"));
-        aminoAcids.put("trp", List.of("TGG"));
-        aminoAcids.put("tyr", List.of("TAT", "TAC"));
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(19).add("GTT");
+        aminoAcidDNA.get(19).add("GTC");
+        aminoAcidDNA.get(19).add("GTA");
+        aminoAcidDNA.get(19).add("GTG");
+        aminoAcids.put("val", aminoAcidDNA.get(19));
 
-        aminoAcids.put("val", List.of("GTT", "GTC", "GTA", "GTG"));
-
-        aminoAcids.put("stop", List.of("TAA", "TGA", "TAG"));
-
+        aminoAcidDNA.add(new ArrayList<String>());
+        aminoAcidDNA.get(20).add("TAA");
+        aminoAcidDNA.get(20).add("TGA");
+        aminoAcidDNA.get(20).add("TAG");
+        aminoAcids.put("stop", aminoAcidDNA.get(20));
+        
         // We will also have a inverse map for quick amino acid lookup
         for (Map.Entry<String, List<String>> entry : aminoAcids.entrySet()) {
             String acid = entry.getKey();
