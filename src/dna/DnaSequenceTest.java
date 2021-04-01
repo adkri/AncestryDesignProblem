@@ -15,5 +15,6 @@ public class DnaSequenceTest {
     @Test
     public void transcribe() {
         // TODO: implement tests
+    	
     }
 }
