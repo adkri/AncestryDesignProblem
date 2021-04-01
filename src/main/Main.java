@@ -7,7 +7,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        String dna = "GCTCGCAACATCGGATATAGA";
+        String dna = "GCTCGCAATATTGGATATAGA";
         System.out.println("DNA: " + dna);
         System.out.println("The amino acids produced by this DNA Sequence is:");
 
