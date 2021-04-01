@@ -14,7 +14,8 @@ public class DnaSequence {
         // TODO: fix me
         List<String> aminoAcids = new LinkedList<>();
         int i = 0;
-        while(i < dna.length()) {
+   
+        while(i < dna.length() - 2) {
             String triplet = "" + dna.charAt(i) + dna.charAt(i+1) + dna.charAt(i+2);
             try {
                 String acid = this.dnaCodon.acidFor(triplet);
@@ -23,6 +24,7 @@ public class DnaSequence {
                 // silently pass codon that does not transcribe a amino acid
             }
             i += 1;
+            
         }
         return aminoAcids;
     }
