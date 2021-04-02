@@ -2,6 +2,8 @@ package dna;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.NoSuchElementException;
+
 
 public class DnaSequence {
     DNACodon dnaCodon;
@@ -14,13 +16,16 @@ public class DnaSequence {
         // TODO: fix me
         List<String> aminoAcids = new LinkedList<>();
         int i = 0;
-        while(i < dna.length()) {
+        while(i < dna.length()-2) {
             String triplet = "" + dna.charAt(i) + dna.charAt(i+1) + dna.charAt(i+2);
             try {
                 String acid = this.dnaCodon.acidFor(triplet);
                 aminoAcids.add(acid);
             } catch (Exception e) {
                 // silently pass codon that does not transcribe a amino acid
+                if(triplet.length() != 3){
+                    throw new NoSuchElementException();
+                }
             }
             i += 1;
         }
