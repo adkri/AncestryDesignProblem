@@ -20,7 +20,5 @@ public class Main {
             separater = "-";
         }
         System.out.println();
-
-        //Lynn's commit
     }
 }
