@@ -14,6 +14,8 @@ public class DnaSequenceTest {
 
     @Test
     public void transcribe() {
-        // TODO: implement tests
+        assertEquals("[ala, arg, asp, asn, cys]", dnaSequence.transcribe("GCAAGAGATAATTGT").toString());
+        assertEquals("[ala, arg, asp, asn, cys]", dnaSequence.transcribe("gcaagagataattgt").toString());
+
     }
 }
