@@ -15,7 +15,7 @@ public class Main {
         List<String> aminoacid = dnaSequence.transcribe(dna);
 
         String separater = "";
-        for(String acid : aminoacid) {
+        for (String acid : aminoacid) {
             System.out.print(separater + acid);
             separater = "-";
         }
