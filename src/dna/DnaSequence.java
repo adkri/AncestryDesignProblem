@@ -22,7 +22,7 @@ public class DnaSequence {
             } catch (Exception e) {
                 // silently pass codon that does not transcribe a amino acid
             }
-            i += 1;
+            i += 3;
         }
         return aminoAcids;
     }
