@@ -11,7 +11,6 @@ public class DnaSequence {
     }
 
     public List<String> transcribe(String dna) {
-        // TODO: fix me
         List<String> aminoAcids = new LinkedList<>();
         int i = 2;
         while(i < dna.length()) {
