@@ -13,9 +13,9 @@ public class DnaSequence {
     public List<String> transcribe(String dna) {
         // TODO: fix me
         List<String> aminoAcids = new LinkedList<>();
-        int i = 0;
+        int i = 2;
         while(i < dna.length()) {
-            String triplet = "" + dna.charAt(i) + dna.charAt(i+1) + dna.charAt(i+2);
+            String triplet = "" + dna.charAt(i-2) + dna.charAt(i-1) + dna.charAt(i);
             try {
                 String acid = this.dnaCodon.acidFor(triplet);
                 aminoAcids.add(acid);
