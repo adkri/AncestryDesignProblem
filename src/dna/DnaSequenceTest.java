@@ -7,6 +7,7 @@ import static org.junit.Assert.*;
 
 public class DnaSequenceTest {
     DnaSequence dnaSequence;
+
     @Before
     public void setUp() throws Exception {
         dnaSequence = new DnaSequence();
@@ -14,6 +15,6 @@ public class DnaSequenceTest {
 
     @Test
     public void transcribe() {
-        // TODO: implement tests
+
     }
 }
