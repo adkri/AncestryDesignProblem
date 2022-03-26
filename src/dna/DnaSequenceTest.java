@@ -3,7 +3,6 @@ package dna;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
 
 public class DnaSequenceTest {
     DnaSequence dnaSequence;
@@ -14,6 +13,6 @@ public class DnaSequenceTest {
 
     @Test
     public void transcribe() {
-        // TODO: implement tests
+
     }
 }
