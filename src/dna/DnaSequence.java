@@ -20,7 +20,7 @@ public class DnaSequence {
                 String acid = this.dnaCodon.acidFor(triplet);
                 aminoAcids.add(acid);
             } catch (Exception e) {
-                // silently pass codon that does not transcribe a amino acid
+                // silently pass codon that does not transcribe an amino acid
             }
             i += 1;
         }
