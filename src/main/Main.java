@@ -16,10 +16,12 @@ public class Main {
 
         String separater = "";
         for(String acid : aminoacid) {
-            System.out.print(separater + acid);
+            System.out.print(separater + dna);
             separater = "-";
         }
         System.out.println();
+
+
 
     }
 }
