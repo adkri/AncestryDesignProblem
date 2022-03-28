@@ -1,6 +1,9 @@
 package dna;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+
 import java.util.List;
 import java.util.Map;
 
@@ -20,42 +23,64 @@ public class DNACodon {
         codons = new HashMap<>();
 
         // Codons from wikipedia: https://en.wikipedia.org/wiki/DNA_codon_table
-
-        aminoAcids.put("ala", List.of("GCT", "GCC", "GCA", "GCG"));
-        aminoAcids.put("arg", List.of("CGT", "CGC", "CGA", "CGG", "AGA", "AGG"));
-        aminoAcids.put("asn", List.of("AAT", "AAC"));
-        aminoAcids.put("asp", List.of("GAT", "GAC"));
+        
+        ArrayList<String> list1 = new ArrayList<>(Arrays.asList("GCT", "GCC", "GCA", "GCG"));
+        ArrayList<String> list2 = new ArrayList<>(Arrays.asList("CGT", "CGC", "CGA", "CGG", "AGA", "AGG"));
+        ArrayList<String> list3 = new ArrayList<>(Arrays.asList("AAT", "AAC"));
+        ArrayList<String> list4 = new ArrayList<>(Arrays.asList("GAT", "GAC"));
+        ArrayList<String> list5 = new ArrayList<>(Arrays.asList("TGT", "TGC"));
+        ArrayList<String> list6 = new ArrayList<>(Arrays.asList("CAA", "CAG"));
+        ArrayList<String> list7 = new ArrayList<>(Arrays.asList("GAA", "GAG"));
+        ArrayList<String> list8 = new ArrayList<>(Arrays.asList("GGT", "GGC", "GGA", "GGG"));
+        ArrayList<String> list9 = new ArrayList<>(Arrays.asList("CAT", "CAC"));
+        ArrayList<String> list10 = new ArrayList<>(Arrays.asList("ATT", "ATC", "ATA"));
+        ArrayList<String> list11 = new ArrayList<>(Arrays.asList("CTT", "CTC", "CTA", "CTG", "TTA", "TTG"));
+        ArrayList<String> list12 = new ArrayList<>(Arrays.asList("AAA", "AAG"));
+        ArrayList<String> list13 = new ArrayList<>(Arrays.asList("ATG"));
+        ArrayList<String> list14 = new ArrayList<>(Arrays.asList("TTT", "TTC"));
+        ArrayList<String> list15 = new ArrayList<>(Arrays.asList("CCT", "CCC", "CCA", "CCG"));
+        ArrayList<String> list16 = new ArrayList<>(Arrays.asList("TCT", "TCC", "TCA", "TCG", "AGT", "AGC"));
+        ArrayList<String> list17 = new ArrayList<>(Arrays.asList("ACT", "ACC", "ACA", "ACG"));
+        ArrayList<String> list18 = new ArrayList<>(Arrays.asList("TGG"));
+        ArrayList<String> list19 = new ArrayList<>(Arrays.asList("TAT", "TAC"));
+        ArrayList<String> list20 = new ArrayList<>(Arrays.asList("GTT", "GTC", "GTA", "GTG"));
+        ArrayList<String> list21 = new ArrayList<>(Arrays.asList("TAA", "TGA", "TAG"));
+        
+        aminoAcids.put("ala", list1);
+        aminoAcids.put("arg", list2);
+        aminoAcids.put("asn", list3);
+        aminoAcids.put("asp", list4);
         // there are some codons that can translate to both asp or asn, but due
         // to the constraint we will not include them
 
-        aminoAcids.put("cys", List.of("TGT", "TGC"));
-        aminoAcids.put("gln", List.of("CAA", "CAG"));
-        aminoAcids.put("glu", List.of("GAA", "GAG"));
-        aminoAcids.put("gly", List.of("GGT", "GGC", "GGA", "GGG"));
+        aminoAcids.put("cys", list5);
+        aminoAcids.put("gln", list6);
+        aminoAcids.put("glu", list7);
+        aminoAcids.put("gly", list8);
 
-        aminoAcids.put("his", List.of("CAT", "CAC"));
+        aminoAcids.put("his", list9);
 
         // aminoAcids.put("start", List.of("ATG"));
         // we don't include start as ATG already trancribes to start
 
-        aminoAcids.put("lle", List.of("ATT", "ATC", "ATA"));
-        aminoAcids.put("leu", List.of("CTT", "CTC", "CTA", "CTG", "TTA", "TTG"));
-        aminoAcids.put("lys", List.of("AAA", "AAG"));
+        aminoAcids.put("lle", list10);
+        aminoAcids.put("leu", list11);
+        aminoAcids.put("lys", list12);
 
-        aminoAcids.put("met", List.of("ATG"));
+        aminoAcids.put("met", list13);
 
-        aminoAcids.put("phe", List.of("TTT", "TTC"));
-        aminoAcids.put("pro", List.of("CCT", "CCC", "CCA", "CCG"));
+        aminoAcids.put("phe", list14);
+        aminoAcids.put("pro", list15);
 
-        aminoAcids.put("ser", List.of("TCT", "TCC", "TCA", "TCG", "AGT", "AGC"));
+        aminoAcids.put("ser", list16);
 
-        aminoAcids.put("thr", List.of("ACT", "ACC", "ACA", "ACG"));
-        aminoAcids.put("trp", List.of("TGG"));
-        aminoAcids.put("tyr", List.of("TAT", "TAC"));
+        aminoAcids.put("thr", list17);
+        aminoAcids.put("trp", list18);
+        aminoAcids.put("tyr", list19);
 
-        aminoAcids.put("val", List.of("GTT", "GTC", "GTA", "GTG"));
+        aminoAcids.put("val", list20);
 
-        aminoAcids.put("stop", List.of("TAA", "TGA", "TAG"));
+        aminoAcids.put("stop", list21);
 
         // We will also have a inverse map for quick amino acid lookup
         for (Map.Entry<String, List<String>> entry : aminoAcids.entrySet()) {
