@@ -22,7 +22,8 @@ public class DnaSequence {
             } catch (Exception e) {
                 // silently pass codon that does not transcribe a amino acid
             }
-            i += 1;
+            i += 3;
+            //changed 1 to 3 to account for groups being read.
         }
         return aminoAcids;
     }

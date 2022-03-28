@@ -13,10 +13,11 @@ public class Main {
 
         DnaSequence dnaSequence = new DnaSequence();
         List<String> aminoacid = dnaSequence.transcribe(dna);
+        
 
         String separater = "";
         for(String acid : aminoacid) {
-            System.out.print(separater + acid);
+        	System.out.print(separater + acid);
             separater = "-";
         }
         System.out.println();
