@@ -17,6 +17,7 @@ public class Main {
 
         String separater = "";
         for(String acid : aminoacid) {
+        	System.out.print(separater + acid);
             separater = "-";
         }
         System.out.println();
