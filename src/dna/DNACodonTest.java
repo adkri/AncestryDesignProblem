@@ -16,10 +16,10 @@ public class DNACodonTest {
 
     @Test
     public void checkForAllStandardCodons() {
-        char[] letters = {'A', 'T', 'G', 'C'};
-        for(char first : letters) {
-            for(char second: letters) {
-                for (char third: letters) {
+        char[] letters = { 'A', 'T', 'G', 'C' };
+        for (char first : letters) {
+            for (char second : letters) {
+                for (char third : letters) {
                     String codon = first + "" + second + "" + third;
                     try {
                         this.dnaCodon.acidFor(codon);

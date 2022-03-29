@@ -14,8 +14,8 @@ public class DnaSequence {
         // TODO: fix me
         List<String> aminoAcids = new LinkedList<>();
         int i = 0;
-        while(i < dna.length()) {
-            String triplet = "" + dna.charAt(i) + dna.charAt(i+1) + dna.charAt(i+2);
+        while (i + 2 < dna.length()) {
+            String triplet = "" + dna.charAt(i) + dna.charAt(i + 1) + dna.charAt(i + 2);
             try {
                 String acid = this.dnaCodon.acidFor(triplet);
                 aminoAcids.add(acid);
