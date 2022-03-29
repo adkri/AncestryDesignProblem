@@ -14,15 +14,16 @@ public class DnaSequence {
         // TODO: fix me
         List<String> aminoAcids = new LinkedList<>();
         int i = 0;
-        while(i < dna.length()) {
+        while(i+2 < dna.length()) {
             String triplet = "" + dna.charAt(i) + dna.charAt(i+1) + dna.charAt(i+2);
             try {
                 String acid = this.dnaCodon.acidFor(triplet);
                 aminoAcids.add(acid);
             } catch (Exception e) {
                 // silently pass codon that does not transcribe a amino acid
+            	i++;
             }
-            i += 1;
+            i += 3;
         }
         return aminoAcids;
     }
