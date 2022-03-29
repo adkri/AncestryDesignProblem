@@ -14,10 +14,10 @@ public class Main {
         DnaSequence dnaSequence = new DnaSequence();
         List<String> aminoacid = dnaSequence.transcribe(dna);
 
-        String separater = "";
+        String separator = "";
         for(String acid : aminoacid) {
-            System.out.print(separater + acid);
-            separater = "-";
+            System.out.print(separator + acid);
+            separator = "-";
         }
         System.out.println();
 
