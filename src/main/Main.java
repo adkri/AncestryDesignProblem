@@ -6,7 +6,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-
+//This is me writing a change
+//This looks like it is doing its thing already
         String dna = "GCTCGCAACATCGGATATAGA";
         System.out.println("DNA: " + dna);
         System.out.println("The amino acids produced by this DNA Sequence is:");
