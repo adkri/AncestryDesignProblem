@@ -12,7 +12,7 @@ public class DNACodon {
      * Sets up the DNA Codon values
      * Note: There is a constraint on the codon to amino acid relation.
      * Sometimes two triples of letters will translate into the same protein,
-     * but no triple will translate into more than one protein.
+     * but no triple will translate into more than one protein. cvcffddfrer4e4ew
      */
     public DNACodon() {
         // initialize the maps
